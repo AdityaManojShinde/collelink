@@ -14,10 +14,10 @@ function Hero() {
           </h1>
           <p className="mb-8 leading-relaxed text-muted-foreground">
             Empower your college community with Collelink, the ultimate platform
-            for organizing and participating in campus events. Whether
-            you&apos;re a student club hosting an engaging workshop or a college
-            committee planning a vibrant cultural fest, Collelink brings your
-            ideas to life.
+            for organizing and participating in campus events. Whether you're a
+            student club hosting an engaging workshop or a college committee
+            planning a vibrant cultural fest, Collelink brings your ideas to
+            life.
           </p>
           <div className="flex justify-center">
             <a href="#about">
