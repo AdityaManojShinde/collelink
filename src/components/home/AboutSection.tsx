@@ -19,8 +19,8 @@ function AboutSection() {
             ColleLink is your ultimate campus companion — a platform designed to
             connect college students, clubs, and communities through events,
             collaboration, and opportunities. Create, explore, and apply for
-            college events with ease. We’re building a smarter, more connected
-            campus experience — one link at a time.
+            college events with ease. We&apos;re building a smarter, more
+            connected campus experience — one link at a time.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
@@ -58,6 +58,7 @@ function AboutSection() {
                     alt={card.title}
                     fill
                     className="object-cover object-center"
+                    priority={idx === 0} // Optional: prioritize the first image if needed
                   />
                 </div>
                 <h3 className="tracking-widest text-indigo-500 dark:text-indigo-400 text-xs font-medium title-font">
