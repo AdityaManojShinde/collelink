@@ -1,5 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 import { Settings } from "lucide-react";
 
 function Dashboard() {
