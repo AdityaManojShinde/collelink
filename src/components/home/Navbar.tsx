@@ -6,6 +6,7 @@ import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import ModeToggle from "../ModeToggle";
+import Image from "next/image";
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,17 +25,21 @@ function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo & Title */}
           <div className="flex items-center space-x-2">
-            <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
-            <span className="text-xl font-semibold text-primary">
-              ScrollConnect
-            </span>
+            <Image
+              width={100}
+              height={100}
+              src="/logo.svg"
+              alt="Logo"
+              className="h-8 w-8"
+            />
+            <span className="text-xl font-bold text-primary">ColleLink</span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             {navItems.map((item, idx) => (
               <Link key={idx} href={item.link} passHref>
-                <span className="text-xl font-medium text-foreground hover:text-primary hover:font-bold transition-all transform hover:scale-110 cursor-pointer">
+                <span className="text-xl font-normal text-foreground hover:text-primary hover:font-bold transition-all transform hover:scale-110 cursor-pointer">
                   {item.name}
                 </span>
               </Link>
