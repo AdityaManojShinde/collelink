@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function AboutSection() {
   return (
@@ -51,8 +52,10 @@ function AboutSection() {
           ].map((card, idx) => (
             <div key={idx} className="xl:w-1/4 md:w-1/2 p-4">
               <div className="bg-gray-100 dark:bg-gray-800 bg-opacity-60 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-                <img
+                <Image
                   className="h-40 rounded w-full object-cover object-center mb-6"
+                  height={40}
+                  width={40}
                   src={card.image}
                   alt={card.title}
                 />
