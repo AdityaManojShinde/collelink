@@ -86,6 +86,22 @@ function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 bg-background/90 backdrop-blur-md">
+          <SignedIn>
+            <div className="flex flex-row items-center justify-between py-2">
+              <Link href="/dashboard" passHref>
+                <Button variant={"outline"}>Dashboard</Button>
+              </Link>
+              <div className="flex justify-center pt-2">
+                <UserButton />
+              </div>
+            </div>
+          </SignedIn>
+          <div className="flex flex-row items-center justify-between">
+            <div className="block text-foreground hover:text-primary hover:font-bold font-medium py-2  transition-all transform hover:scale-105">
+              Theme
+            </div>{" "}
+            <ModeToggle />
+          </div>
           {navItems.map((item, idx) => (
             <Link key={idx} href={item.link} passHref>
               <div className="block text-foreground hover:text-primary hover:font-bold font-medium py-2  transition-all transform hover:scale-105">
@@ -108,20 +124,6 @@ function Navbar() {
                 </span>
               </Link>
             </SignedOut>
-            <div>
-              <ModeToggle /> Theme
-            </div>
-
-            <SignedIn>
-              <div className="flex flex-row items-center justify-between">
-                <Link href="/dashboard" passHref>
-                  <Button variant={"outline"}>Dashboard</Button>
-                </Link>
-                <div className="flex justify-center pt-2">
-                  <UserButton />
-                </div>
-              </div>
-            </SignedIn>
           </div>
         </div>
       )}
