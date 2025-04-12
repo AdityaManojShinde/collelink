@@ -1,12 +1,13 @@
+import Hero from "@/components/home/Hero";
 import Navbar from "@/components/home/Navbar";
-import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-    <div className="flex gap-2 p-2 ">
+    <div>
       {/* Navbar */}
       <Navbar />
       {/* Hero Section */}
+      <Hero />
       {/* Events */}
       {/* About Section */}
       {/* Footer */}
